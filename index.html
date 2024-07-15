@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <title>Dice Guessing</title>
+    <link rel='stylesheet' href='style.css'>
+    <script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+    <script type='module' src='script.js'></script>
+</head>
+<body>
+<div class='root'>
+    <div class='page-background'></div>
+    <div class='page-container'>
+
+        <section class='column player-column first-player'>
+            <header class='column-row guessed-amount'>
+                <span class='amount-bubble guessed-amount-text'>7</span>
+            </header>
+            <main class='hand-container'>
+                <div class='block hand'>
+                    <div class='hand-column'>
+                        <div class='dice'></div>
+                        <div class='dice'></div>
+                        <div class='dice'></div>
+                    </div>
+                    <div class='hand-column'>
+                        <div class='dice'></div>
+                        <div class='dice'></div>
+                    </div>
+                </div>
+            </main>
+            <footer class='held-amount'>
+                <span class='amount-bubble held-amount-text'>10</span>
+            </footer>
+        </section>
+
+
+
+        <section class='column middle-column'>
+            <header class='screen-header-container'>
+                <div class='block screen-title'>
+                    <span class='screen-title-text'></span>
+                </div>
+            </header>
+            <main class='rules-container'>
+                <div class='block rules'>
+                    <div class='rules-text'>
+                        <p>В начале у каждой стороны по 10 косточек.</p>
+                        <p>Игроки прячут в своей руке от одной до пяти косточек.</p>
+                        <p>Игроки по очереди угадывают сумму косточек в своей руке и в руке у соперника.</p>
+                        <p>Когда все косточки противника заканчиваются, вы выигрываете.</p>
+                    </div>
+                </div>
+            </main>
+            <footer class='controls-container'>
+                <div class='controls'>
+                    <button class='button play-button'>
+                        Начать игру
+                    </button>
+                    <button class='button start-round-button'>
+                        Начать раунд
+                    </button>
+                    <button class='button next-round-button'>
+                        Продолжить
+                    </button>
+                    <button class='button to-rules-button'>
+                        К правилам
+                    </button>
+                </div>
+            </footer>
+        </section>
+
+
+
+        <section class='column player-column second-player'>
+            <header class='guessed-amount'>
+                <span class='amount-bubble guessed-amount-text'>8</span>
+            </header>
+            <main class='hand-container'>
+                <div class='block hand'>
+                    <div class='hand-column'>
+                        <div class='dice'></div>
+                        <div class='dice'></div>
+                    </div>
+                    <div class='hand-column'>
+                        <div class='dice'></div>
+                        <div class='dice'></div>
+                        <div class='dice'></div>
+                    </div>
+                </div>
+            </main>
+            <footer class='held-amount'>
+                <span class='amount-bubble held-amount-text'>10</span>
+            </footer>
+        </section>
+
+    </div>
+</div>
+</body>
+</html>

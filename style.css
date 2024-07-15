@@ -1,0 +1,290 @@
+html, body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+
+    font-family: cursive;
+}
+
+.root {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100vw;
+    height: 100vh;
+}
+
+.page-container {
+    display: flex;
+    flex-direction: row;
+
+    width: 1080px;
+    height: 880px;
+    padding: 40px;
+}
+
+.page-background {
+    position: absolute;
+
+    width: 100vw;
+    height: 100vh;
+
+    background: url('img/background.jpg');
+    background-position-x: 480px;
+    filter: grayscale(0.4);
+}
+
+/* Columns */
+
+.column {
+    display: flex;
+    flex-direction: column;
+
+    flex-basis: 0;
+}
+
+.column > * {
+    display: flex;
+}
+
+.column header,
+.column footer {
+    flex-grow: 1;
+    flex-basis: 0;
+}
+
+.column header {
+
+}
+
+.column main {
+    height: 500px;
+}
+
+.column footer {
+
+}
+
+/* Generic */
+
+.block {
+    flex-grow: 1;
+
+    margin: 20px;
+
+    background-color: rgba(63, 63, 63, 0.6);
+
+    border: 3px solid rgba(63, 63, 63, 0.8);
+    border-radius: 40px;
+}
+
+.amount-bubble {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100px;
+    height: 100px;
+
+    font-size: 48px;
+    font-weight: 600;
+
+    color: white;
+    background-color: rgba(63, 63, 63, 0.6);
+
+    border: 3px solid rgba(63, 63, 63, 0.8);
+    border-radius: 50%;
+}
+
+.amount-bubble.blink {
+    animation: blink 0.3s 1;
+}
+
+@keyframes blink {
+    from {
+        font-size: 80px;
+        transform: scale(1.1);
+    }
+    to {}
+}
+
+/* Player Columns */
+
+.player-column {
+    flex-grow: 3;
+}
+
+.guessed-amount {
+    display: flex;
+    align-items: center;
+}
+
+.first-player .guessed-amount {
+    justify-content: flex-end;
+}
+
+.second-player .guessed-amount {
+    justify-content: flex-start;
+}
+
+.guessed-amount-text {
+
+}
+
+
+
+.hand-container {
+    display: flex;
+}
+
+.hand {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.hand-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.dice {
+    width: 120px;
+    height: 120px;
+    margin: 10px;
+
+    background: url('img/empty-bone.svg') center no-repeat;
+    background-size: 100px 100px;
+
+    border-radius: 50%;
+
+    transition: 0.15s all, 0.3s background-image;
+}
+
+.dice.checked {
+    background-image: url('img/broken-bone.svg');
+}
+
+.dice.checked.highlighted {
+    background-image: url('img/broken-red-bone.svg');
+}
+
+.dice:hover {
+    background-size: 120px 120px;
+
+    cursor: pointer;
+}
+
+
+
+.held-amount {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.held-amount-text {
+
+}
+
+/* Middle Column */
+
+.middle-column {
+    flex-grow: 4;
+}
+
+.screen-header-container {
+
+}
+
+.screen-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.screen-title-text {
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: 4px;
+
+    color: white;
+}
+
+.rules-container {
+
+}
+
+.rules {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rules-text {
+    font-size: 19px;
+    padding: 20px;
+    color: white;
+}
+
+.rules-text p {
+    margin: 0 0 1em;
+}
+
+.controls-container {
+    display: flex;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    flex-grow: 1;
+}
+
+.button {
+    width: 220px;
+    height: 60px;
+
+    font-size: 20px;
+    letter-spacing: 2px;
+
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    border: 3px solid rgba(0, 0, 0, 0.6);
+    border-radius: 20px;
+
+    transition: 0.1s background-color;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.button:active {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.button:disabled {
+    color: lightgray;
+    background-color: rgba(0, 0, 0, 0.3);
+
+    border: 3px solid rgba(0, 0, 0, 0.4);
+}
